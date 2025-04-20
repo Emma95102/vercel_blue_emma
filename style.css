@@ -1,4 +1,5 @@
 html,body {
+	font-family: 'Noto Sans TC', 'Titillium Web', sans-serif;
 	animation: backgroundFade 20s ease infinite;
 	margin: 0;
 	background: linear-gradient(-45deg, #000428, #004e92, #000428, #004192);
@@ -171,12 +172,23 @@ margin: 20px 0;
 
 
 .top-nav {
-	background-color: rgba(0, 31, 63, 0.95);
-	padding: 10px 0;
+	background-image: url('image8.png');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	position: relative;
+	justify-content: space-between;
+	padding: 0 20px;
 	position: fixed;
 	width: 100%;
 	top: 0;
-	z-index: 10;
+	height: 60px;
+	z-index: 1000;
+}
+
+
+.hero {
+	padding-top: 60px; 
 }
 .nav-bar {
 	display: flex;
@@ -185,7 +197,15 @@ margin: 20px 0;
 	list-style: none;
 	margin: 0;
 	padding: 0;
+	top:0;
+	width: 100%;
+	background-color: transparent;
+	transition: background-color 0.3s;
+	position: fixed;
 
+}
+.navbar.scrolled{
+	background-color: #001F3F;
 }
 
 
@@ -202,31 +222,6 @@ margin: 20px 0;
 	color: #66ccff;
 }
 
-.hero {
-	height: 100vh;
-	background: linear-gradient(135deg, #081826, #0d1f33);
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-	padding-top: 60px;
-	position: relative; 
-	z-index: 1;
-}
-.hero-title {
-	font-size: 4em;
-	color: #66ffff;
-	margin-bottom: 0.3em;
-	text-shadow: 2px 2px 12px rgba(0, 234, 255, 0.3);
-	animation: fadeUp 1.2s ease-out;
-
-}
-.hero-sub {
-	font-size: 1.2em;
-	color: #66ffff;
-	animation: fadeUp 1.8s ease-out;
-}
 @keyframes backgroundFade{
 	from{
 		background-color: #000000;
@@ -277,3 +272,76 @@ line-height: 1.6;
 padding: 0 20px;
 text-align: center;
 }
+.landing {
+height: 100vh; 
+display: flex;
+flex-direction: column;
+justify-content: center; 
+align-items: center; 
+text-align: center;
+background: #f0f8ff;
+position: relative;
+background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+					  url('image7.png'); 
+background-size: cover;
+background-position: center;
+font-family: 'Noto Sans TC', 'Titillium Web', sans-serif;
+}
+.landing-title {
+	font-size: 3em;
+	font-weight: 600;
+	color: #003366;
+	margin-bottom: 20px;
+}
+.landing h1 {
+font-size: 3em;
+color: #00bfff;
+margin-bottom: 30px; 
+}
+.enter-button {
+	margin: 0 auto;
+	font-size: 1.2em;
+	padding: 12px 24px;
+	background-color: #007bff;
+	color: white;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+.enter-button:hover {
+	background-color: #0056b3;
+}
+
+.autobiography-title {
+	text-align: center;
+	font-family: 'Noto Sans TC', sans-serif; /* 或改成你想用的字型 */
+	font-size: 2.5em;
+	margin-top: 40px;
+	margin-bottom: 20px;
+}
+.section-box{
+	border: 2px solid #cce7ff;
+	background-color: #f0f8ff;
+	padding: 20px;
+	border-radius: 10px;
+	width: 90%;
+	max-width: 700px;
+	margin: 0 auto 40px auto;
+	box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.section-title {
+	text-align: center;
+	font-family: 'Noto Sans TC', sans-serif;
+	font-size: 2.5em;
+	color: #333;
+	margin-bottom: 20px;
+}
+.section-box:hover {
+	transform: translateY(-3px);
+	box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+	transition: all 0.3s ease;
+}
+
+

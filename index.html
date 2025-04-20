@@ -9,31 +9,50 @@
 
 </head>
 <body>
-	<div class="stars"></div>
-	<header>
+	<section class="landing" id="landing">
+	<h1>黃紫凌的職涯網站</h1>
+	<button onclick="enterSite()" class="enter-button">進入網站</button>
+	</section>
+
+	<section class="main-site" id="mainSite" style="display: none;">
+
+		<div class="stars"></div>
+		<header>
 		<nav class="top-nav">
+
+			<div class="content">
+			<h2>歡迎來到我的履歷網站！</h2>
+			<p>請點選下方導覽列進入各個內容區。</p>
+		</div>
 			<div class="container">	
 			<a href="index.html" class="logo">首頁</a>
 
-			<ul class="nav-bars">
-				<li><a href="autobiography.html" target="_blank">自傳</a><li>
-				<li><a href="ideal-job.html" target="_blank">理想職缺</a><li>
-				<li><a href="skills.html" target="_blank">技能</a><li>
-				<li><a href="experience.html" target="_blank">工作經歷</a><li>
-				<li><a href="competitions.html" target="_blank">比賽經歷</a><li>
-				<li><a href="education.html" target="_blank">學歷</a><li>
-				<li><a href="contact.html" target="_blank">聯絡我</a><li>
-				<li><a href="portfolio.html" target="_blank">我的職涯網站</a><li>
-			</ul>
+				<ul class="nav-bars">
+					<li><a href="#" onclick="backToHome()">回首頁</a></li>
+					<li><a href="autobiography.html" target="_blank">自傳</a></li>
+					<li><a href="ideal-job.html" target="_blank">理想職缺</a></li>
+					<li><a href="skills.html" target="_blank">技能</a></li>
+					<li><a href="experience.html" target="_blank">工作經歷</a></li>
+					<li><a href="competitions.html" target="_blank">比賽經歷</a></li>
+					<li><a href="education.html" target="_blank">學歷</a></li>
+					<li><a href="contact.html" target="_blank">聯絡我</a></li>
+					<li><a href="portfolio.html" target="_blank">我的職涯網站</a></li>
+				</ul>
 			</div>
 		</nav>
-	</header>
-	<main class="hero">
-		<div class="container home-intro">
-			<h1 class="hero-title">黃紫凌的職涯網站</h1>
-			<p class="hero-sub">我是一名熱衷數位科技與跨域整合的資訊管理學系學生，曾參與跨境電商競賽，喜歡將技術應用在真實場域，持續探索數據資料、管理與設計的交會點。
-			</p>
-		</div>
-	</main>
+		</header>
+	</section>
+
+<script>
+		function enterSite() {
+		document.getElementById("landing").style.display = "none";
+		document.getElementById("mainSite").style.display = "block";
+		}
+		function backToHome(){
+			document.getElementById("mainSite").style.display = "none";
+			document.getElementById("landing").style.display = "flex";
+			window.scrollTo(0,0);
+		}
+</script>
 </body>
 </html>
